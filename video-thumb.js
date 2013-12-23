@@ -19,9 +19,7 @@ var VideoThumb = {
 		ctx.drawImage(VideoThumb.video, 0, 0, w, h);
 	
 		var data = VideoThumb.canvas.toDataURL("image/jpg");
-		if(data.length > 50){
-			$("img#testing").attr("src", data);
-		}
+		return data;
 		
 	},
 	

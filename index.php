@@ -25,7 +25,10 @@
 						counter--;
 						if (counter <= 0) {
 							counter = 5;
-							VideoThumb.thumb();
+							var data = VideoThumb.thumb();
+							if(data.length > 50){
+								$("img#testing").attr("src", data);
+							}
 						}
 						$("#sec").text(counter);
 					}, 1000);
